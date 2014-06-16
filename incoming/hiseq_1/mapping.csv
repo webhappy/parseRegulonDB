@@ -1,0 +1,25 @@
+id_R1, id_R2, Description
+398,0,aerobic t0_1
+399,0,aerobic Control t30_1
+400,0,aerobic Control t60_1
+401,0,aerobic Control t180_1
+402,0,aerobic Chlor t30_1
+403,0,aerobic Chlor t60_1
+404,0,aerobic Chlor t180_1
+405,0,aerobic Spec t30_1
+406,0,aerobic Spec t60_1
+407,0,aerobic Spec t180_1
+408,0,aerobic Trim t30_1
+409,0,aerobic Trim t60_1
+410,0,aerobic Trim t180_1
+411,0,aerobic Gent t30_1
+412,0,aerobic Gent t60_1
+413,0,aerobic Gent t180_1
+414,0,aerobic Nor t30_1
+415,0,aerobic Nor t60_1
+416,0,aerobic Nor t180_1
+417,0,aerobic Rif t30_1
+418,0,aerobic Rif t60_1
+419,0,aerobic Rif t180_1
+420,0,aerobic Vanc-silver t30_3
+421,0,aerobic Vanc-silver t60_3

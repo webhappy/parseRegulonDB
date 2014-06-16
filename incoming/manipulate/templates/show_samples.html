@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag-n-drop samples to produce CSV file for</title>
+<script src="{{ url_for('static', filename='jquery-2.1.0.js')}}"></script>
+    <script src="{{ url_for('static', filename='jquery.sortable.js')}}"></script>
+    <style>
+		#demos section {
+			overflow: hidden;
+		}
+		.sortable {
+            width: 200px;
+			min-height: 200px;
+			float: left;
+			width: 310px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.sortable.grid {
+			overflow: hidden;
+		}
+		.sortable li {
+			list-style: none;
+			border: 1px solid #CCC;
+			background: #F6F6F6;
+			color: #1C94C4;
+			margin: 5px;
+			padding: 5px;
+			height: 22px;
+		}
+		.sortable.grid li {
+			line-height: 80px;
+			float: left;
+			width: 80px;
+			height: 80px;
+			text-align: center;
+		}
+		.handle {
+			cursor: move;
+		}
+		.sortable.connected {
+			width: 200px;
+			min-height: 100px;
+			float: left;
+		}
+		li.disabled {
+			opacity: 0.5;
+		}
+		li.highlight {
+			background: #FEE25F;
+		}
+		li.sortable-placeholder {
+			border: 1px dashed #CCC;
+			background: none;
+		}
+	</style>
+</head>
+<body>
+<table>
+<tr>
+    <td valign="top">
+        <p>Available:</p>
+        <ul class="sortable" id="available">
+            {% for e in samples %}
+            <li> {{ e[1]}}</li>
+            {% endfor %}
+        </ul></td>
+    <td width="50"></td>
+    <td valign="top">
+        <p>Selected:</p>
+        <ul class="sortable" id="selected">
+        </ul>
+    </td>
+</tr>
+</table>
+<script>$('.sortable').sortable({connectWith: '.connected', items:':not(.disabled)'});</script>
+
+</body>
+</html>

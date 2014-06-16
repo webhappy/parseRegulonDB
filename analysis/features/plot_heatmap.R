@@ -1,0 +1,16 @@
+library(lattice)
+data <- read.csv('features.csv')
+summary(data)
+mat <- read.csv('heatmap_good.csv',header=FALSE)
+mat <- data.matrix(mat)
+rownames(mat) <- c("A","C","G","T")
+colnames(mat) <- 1:20
+# heatmap(mat,Rowv=NA,Colv=NA,labRow=c('A','C','G','T'))
+colors <- colorRampPalette(c('blue','black','yellow'))(30)
+levelplot(t(mat),xlab="Position",ylab="NT",col.values=c('A','C','G','T'),col.regions=colors,main="Mean log ratio for sgRNA's that contain this nucleotide at this postion")
+
+features <- read.csv('features.csv')
+plot(features$Target ~ features$DistanceFromATG,xlim=c(0,200),main="Poor performance is not an obvious function of distance")
+boxplot(features$Target ~ features$GCperc,ylab="Log ratio",xlab="%GC")
+plot(features$Target~features$wtA)
+plot(features[,4:ncol(features)])

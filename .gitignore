@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+*.fastq
+*.log
+*sorted_1
+analysis/nupack3.0.3/cache/*
+.idea/*
